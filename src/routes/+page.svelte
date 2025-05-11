@@ -6,6 +6,10 @@
 
 	onMount(async () => {
 		const user = await fetch('/api/getUser');
+		if (!user.ok) {
+			console.error('Error fetching user');
+			return;
+		}
 		const userData = await user.json();
 		completed = userData.completed;
 	});

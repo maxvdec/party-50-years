@@ -13,8 +13,7 @@
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
 		"studio": "bunx prisma studio",
-		"postinstall": "bunx prisma generate",
-		"vercel-build": "bunx prisma migrate deploy && svelte-kit build"
+		"postinstall": "bunx prisma generate"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",

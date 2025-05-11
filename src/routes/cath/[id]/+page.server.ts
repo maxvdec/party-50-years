@@ -13,11 +13,20 @@ export const load: PageServerLoad = async ({ params, cookies }) => {
 		path: '/'
 	});
 
-	const userId = cookies.get('user');
+	let userId = cookies.get('user');
 	if (!userId) {
-		throw error(401, 'Unauthorized');
+		const newUser = await prisma.user.create({
+			data: {
+				shots: {
+					create: []
+				}
+			}
+		});
+		userId = newUser.id;
+		cookies.set('user', userId, {
+			path: '/'
+		});
 	}
-
 	const shot = await prisma.shot.findFirst({
 		where: {
 			userId: userId,

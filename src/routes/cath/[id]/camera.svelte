@@ -91,6 +91,7 @@
 		<div class="video-container">
 			<video bind:this={videoElement} autoplay playsinline class="h-screen w-screen object-cover"
 			></video>
+
 			<div
 				class="fixed bottom-0 flex w-full justify-center gap-4 bg-white/50 p-4 backdrop-blur-2xl"
 			>

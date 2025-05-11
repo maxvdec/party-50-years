@@ -12,7 +12,8 @@
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"format": "prettier --write .",
 		"lint": "prettier --check . && eslint .",
-		"studio": "bunx prisma studio"
+		"studio": "bunx prisma studio",
+		"postinstall": "bunx prisma generate"
 	},
 	"devDependencies": {
 		"@eslint/compat": "^1.2.5",

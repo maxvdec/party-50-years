@@ -39,7 +39,7 @@
 	}
 </script>
 
-{#if !data.hasShot}
+{#if !data.hasShot || data.cathegory.id === '99'}
 	<div class="h-screen w-screen">
 		<Camera onSubmit={handleSubmit}></Camera>
 	</div>

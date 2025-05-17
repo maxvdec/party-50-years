@@ -5,10 +5,6 @@
 	let completed = $state(0);
 	let showPopup = $state(false);
 
-	function openPopup() {
-		showPopup = true;
-	}
-
 	function choose(option: string) {
 		if (option === 'hai') {
 			fetch('/api/fillOn');
@@ -33,8 +29,8 @@
 	<nav
 		class="fixed flex h-14 w-full flex-row items-center justify-between bg-purple-100/50 backdrop-blur-md"
 	>
-		<h1 class="ml-4 text-2xl font-bold">LOGO</h1>
-		<h1 class="mr-4 text-gray-500">{completed}/10</h1>
+		<img class="ml-4 h-10 w-20" src="/logo.png" alt="Logo" />
+		<h1 class="mr-4 text-gray-500">{completed}/12</h1>
 	</nav>
 	<div class="flex flex-col items-center pt-20">
 		{#if showPopup}

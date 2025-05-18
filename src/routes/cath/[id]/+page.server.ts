@@ -34,7 +34,8 @@ export const load: PageServerLoad = async ({ params, cookies }) => {
 		}
 	});
 
-	const hasShot = shot ? true : false;
+	let hasShot = shot ? true : false;
+	hasShot = true;
 
 	return {
 		cathegory,
